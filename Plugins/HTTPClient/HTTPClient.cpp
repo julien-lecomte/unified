@@ -42,6 +42,9 @@ struct Request
     std::string headersString;
     httplib::Headers headers;
     std::string tag;
+    std::string custom1;
+    std::string custom2;
+    std::string custom3;
 
     Request()
     {
@@ -311,6 +314,9 @@ NWNX_EXPORT ArgumentStack SendRequest(ArgumentStack &&args)
 {
     auto clientReq = Request();
     clientReq.id = s_clientRequestId++;
+    clientReq.custom3 = ScriptAPI::ExtractArgument<std::string>(args);
+    clientReq.custom2 = ScriptAPI::ExtractArgument<std::string>(args);
+    clientReq.custom1 = ScriptAPI::ExtractArgument<std::string>(args);
     clientReq.tag = ScriptAPI::ExtractArgument<std::string>(args);
     clientReq.requestMethod = static_cast<RequestMethod>(ScriptAPI::ExtractArgument<int>(args));
     clientReq.host = ScriptAPI::ExtractArgument<std::string>(args);
@@ -349,5 +355,8 @@ NWNX_EXPORT ArgumentStack GetRequest(ArgumentStack &&args)
     ScriptAPI::InsertArgument(stack, clientReq.host);
     ScriptAPI::InsertArgument(stack, (int32_t) clientReq.requestMethod);
     ScriptAPI::InsertArgument(stack, clientReq.tag);
+    ScriptAPI::InsertArgument(stack, clientReq.custom1);
+    ScriptAPI::InsertArgument(stack, clientReq.custom2);
+    ScriptAPI::InsertArgument(stack, clientReq.custom3);
     return stack;
 }

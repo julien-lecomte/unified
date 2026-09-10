@@ -32,6 +32,7 @@ https://github.com/nwnxee/unified/compare/build8193.37.13...HEAD
 - Events: Added ID to the NWNX_ON_ITEMPROPERTY_EFFECT_* events data.
 - Utils: Change LOG_INFO to LOG_DEBUG for console commands.
 - Admin: Player/DM password functions no longer print the passwords to the log.
+- HTTPClient: Enable three custom fields to pass to response.
 
 ### Deprecated
 - N/A
