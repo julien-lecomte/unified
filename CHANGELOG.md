@@ -35,6 +35,7 @@ https://github.com/nwnxee/unified/compare/build8193.37.13...HEAD
 - Admin: Player/DM password functions no longer print the passwords to the log.
 - SQL: Database passwords are no longer printed to the log when connecting.
 - HTTPClient: Enable three custom fields to pass to response.
+- Events: Add missing NWNX_ON_SET_EXPERIENCE_* const.
 
 ### Deprecated
 - N/A
