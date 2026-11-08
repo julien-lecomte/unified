@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['banimloop1_51',['bAnimLoop1',['../structNWNX__Tileset__CustomTileData.html#ad7cc06ac7a4fb8eeca5a33810e1cf479',1,'NWNX_Tileset_CustomTileData']]],
+  ['banimloop2_52',['bAnimLoop2',['../structNWNX__Tileset__CustomTileData.html#a800fec1c59fd92234fa6d7cf4e4b3964',1,'NWNX_Tileset_CustomTileData']]],
+  ['banimloop3_53',['bAnimLoop3',['../structNWNX__Tileset__CustomTileData.html#a72f43f39bfe435c2271885f34db1478d',1,'NWNX_Tileset_CustomTileData']]],
+  ['bbypassarmorcheckpenalty_54',['bBypassArmorCheckPenalty',['../structNWNX__SkillRanks__SkillFeat.html#a7dd800dcb05d188252a50c070ae71f2b',1,'NWNX_SkillRanks_SkillFeat']]],
+  ['bexpose_55',['bExpose',['../structNWNX__EffectUnpacked.html#ae72adce7ceb667a20c4baf86bfad47c8',1,'NWNX_EffectUnpacked']]],
+  ['bgrewriteaof_56',['BGREWRITEAOF',['../nwnx__redis__short_8nss.html#a507cb6780d0bdf803b1aae686cf29a97',1,'nwnx_redis_short.nss']]],
+  ['bgsave_57',['BGSAVE',['../nwnx__redis__short_8nss.html#a16f36180b712e0179ec4c2ce76c10326',1,'nwnx_redis_short.nss']]],
+  ['bhasheighttransition_58',['bHasHeightTransition',['../structNWNX__Tileset__TilesetData.html#a28a1cc6ee6bb8ae51286c357f429a548',1,'NWNX_Tileset_TilesetData']]],
+  ['binterior_59',['bInterior',['../structNWNX__Tileset__TilesetData.html#ab190d02f421837b6e1ffa9b3e3f302ff',1,'NWNX_Tileset_TilesetData']]],
+  ['bitcount_60',['BITCOUNT',['../nwnx__redis__short_8nss.html#aebf3a63f4832df507da56cff69468e8d',1,'nwnx_redis_short.nss']]],
+  ['bitfield_61',['BITFIELD',['../nwnx__redis__short_8nss.html#a8e9b0dcdd09694782a06d6498245db21',1,'nwnx_redis_short.nss']]],
+  ['bitop_62',['BITOP',['../nwnx__redis__short_8nss.html#a30228c530313bcf1e01d89bcb8de1990',1,'nwnx_redis_short.nss']]],
+  ['bitpos_63',['BITPOS',['../nwnx__redis__short_8nss.html#ae074f94aa4e0caa434041a0edaf5eb3c',1,'nwnx_redis_short.nss']]],
+  ['bkillingblow_64',['bKillingBlow',['../structNWNX__Damage__AttackEventData.html#a838f86200ed83ab9b52a84720168222d',1,'NWNX_Damage_AttackEventData']]],
+  ['blinkleftvalid_65',['bLinkLeftValid',['../structNWNX__EffectUnpacked.html#a6616a557c8c9c73faa051ff023450212',1,'NWNX_EffectUnpacked']]],
+  ['blinkrightvalid_66',['bLinkRightValid',['../structNWNX__EffectUnpacked.html#a14f3744ff2467b6314841a0cd2e87350',1,'NWNX_EffectUnpacked']]],
+  ['blpop_67',['BLPOP',['../nwnx__redis__short_8nss.html#a08fffe6ef3612def17719eb92bf93431',1,'nwnx_redis_short.nss']]],
+  ['brangedattack_68',['bRangedAttack',['../structNWNX__Damage__AttackEventData.html#a28fce1406884ca59dd146d31c99d7fb2',1,'NWNX_Damage_AttackEventData']]],
+  ['brpop_69',['BRPOP',['../nwnx__redis__short_8nss.html#a40a53f13200e006d312351b80707dd08',1,'nwnx_redis_short.nss']]],
+  ['brpoplpush_70',['BRPOPLPUSH',['../nwnx__redis__short_8nss.html#a2b9c8096beeb08b5721e668555c7fea1',1,'nwnx_redis_short.nss']]],
+  ['bshowicon_71',['bShowIcon',['../structNWNX__EffectUnpacked.html#a332fd2e3db2012dc15d2fff35b88332e',1,'NWNX_EffectUnpacked']]],
+  ['busable_72',['bUsable',['../structNWNX__IPUnpacked.html#aaa2c8bc13b51d3f6ceaf64e3b7fd5326',1,'NWNX_IPUnpacked']]],
+  ['bzpopmax_73',['BZPOPMAX',['../nwnx__redis__short_8nss.html#a6e75b89da73816241d1b4ebb721b094f',1,'nwnx_redis_short.nss']]],
+  ['bzpopmin_74',['BZPOPMIN',['../nwnx__redis__short_8nss.html#a8c240c5acffdc7c10826d8db38b03d70',1,'nwnx_redis_short.nss']]]
+];
