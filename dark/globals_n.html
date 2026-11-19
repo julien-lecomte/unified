@@ -144,6 +144,12 @@ $(document).ready(function(){initNavTree('globals_n.html',''); initResizable(); 
 <li>NWNX_Administration_GetMinLevel()
 : <a class="el" href="group__admin.html#gaac078a00b22b69026b9ce317fbfc1484">nwnx_admin.nss</a>
 </li>
+<li>NWNX_Administration_GetNWSyncAdvertHash()
+: <a class="el" href="group__admin.html#ga304e812b93017a1ce5400f1b04a11208">nwnx_admin.nss</a>
+</li>
+<li>NWNX_Administration_GetNWSyncAdvertUrl()
+: <a class="el" href="group__admin.html#gac8b6430ad7a977f5318c75d50edbe69f">nwnx_admin.nss</a>
+</li>
 <li>NWNX_Administration_GetPlayerPassword()
 : <a class="el" href="group__admin.html#ga350b7e2b7d00e0a1373bcd16980f9426">nwnx_admin.nss</a>
 </li>
@@ -266,6 +272,9 @@ $(document).ready(function(){initNavTree('globals_n.html',''); initResizable(); 
 </li>
 <li>NWNX_Administration_SetModuleName()
 : <a class="el" href="group__admin.html#ga30afeceaca4db8237fd034475d36c0e4">nwnx_admin.nss</a>
+</li>
+<li>NWNX_Administration_SetNWSyncAdvert()
+: <a class="el" href="group__admin.html#ga01b3f04e0bae5edbea5dfa4f87ac2c33">nwnx_admin.nss</a>
 </li>
 <li>NWNX_Administration_SetPlayerPassword()
 : <a class="el" href="group__admin.html#ga0957c093933e4743abefaf14795c0a64">nwnx_admin.nss</a>
@@ -861,6 +870,9 @@ $(document).ready(function(){initNavTree('globals_n.html',''); initResizable(); 
 <li>NWNX_Creature_GetMovementRateFactorCap()
 : <a class="el" href="group__creature.html#gac4e707c4224dfdfcce937bd957dd15f2">nwnx_creature.nss</a>
 </li>
+<li>NWNX_Creature_GetMovementRateFactorModifier()
+: <a class="el" href="group__creature.html#ga4d26cb2cb0522b98b7d015b91bb4ce5b">nwnx_creature.nss</a>
+</li>
 <li>NWNX_Creature_GetMovementType()
 : <a class="el" href="group__creature.html#ga5c7dba1b263cc40e93ac0e3a6b46d686">nwnx_creature.nss</a>
 </li>
@@ -1178,6 +1190,9 @@ $(document).ready(function(){initNavTree('globals_n.html',''); initResizable(); 
 </li>
 <li>NWNX_Creature_SetMovementRateFactorCap()
 : <a class="el" href="group__creature.html#ga86ea47f9480ce99791bb8660a1940bb7">nwnx_creature.nss</a>
+</li>
+<li>NWNX_Creature_SetMovementRateFactorModifier()
+: <a class="el" href="group__creature.html#gae2d459dc824d123dc25645d30a784bb7">nwnx_creature.nss</a>
 </li>
 <li>NWNX_Creature_SetMulticlassLimit()
 : <a class="el" href="group__creature.html#ga7ddd4d9660cafeaaf79514e5cb42f448">nwnx_creature.nss</a>
@@ -1802,6 +1817,15 @@ $(document).ready(function(){initNavTree('globals_n.html',''); initResizable(); 
 </li>
 <li>NWNX_EVENTS_DM_SET_VARIABLE_TYPE_STRING
 : <a class="el" href="group__events.html#ga50630f3f1cead24f4b3a6a5e016a795e">nwnx_events.nss</a>
+</li>
+<li>NWNX_EVENTS_ENCUMBRANCE_STATE_ENCUMBERED
+: <a class="el" href="group__events.html#ga9e3418380cb52d46c67103e5b7f78af3">nwnx_events.nss</a>
+</li>
+<li>NWNX_EVENTS_ENCUMBRANCE_STATE_HEAVILY_ENCUMBERED
+: <a class="el" href="group__events.html#ga830716e3f5f185144ca57459bdcd5a63">nwnx_events.nss</a>
+</li>
+<li>NWNX_EVENTS_ENCUMBRANCE_STATE_NORMAL
+: <a class="el" href="group__events.html#gabb1f146ce792caac5400a482a3273749">nwnx_events.nss</a>
 </li>
 <li>NWNX_Events_GetCurrentEvent()
 : <a class="el" href="group__events.html#ga3dd3ccd8df389359c21d5ca3f681718b">nwnx_events.nss</a>
@@ -3164,6 +3188,9 @@ $(document).ready(function(){initNavTree('globals_n.html',''); initResizable(); 
 </li>
 <li>NWNX_Object_GetLocalVariableCount()
 : <a class="el" href="group__object.html#ga11f4a73b409e6d3726f84fd4c556344c">nwnx_object.nss</a>
+</li>
+<li>NWNX_Object_GetLocalVariables()
+: <a class="el" href="group__object.html#gad89e5262824e501e1d52f814c8446c0a">nwnx_object.nss</a>
 </li>
 <li>NWNX_Object_GetMapNote()
 : <a class="el" href="group__object.html#ga4da581cc592ca482b63628d11602188c">nwnx_object.nss</a>
@@ -4620,8 +4647,20 @@ $(document).ready(function(){initNavTree('globals_n.html',''); initResizable(); 
 <li>NWNX_Player_QBS_UseSpecialAbility()
 : <a class="el" href="group__player.html#ga93b73395786bcc1c62df9dbb7d0aaeff">nwnx_player_qbs.nss</a>
 </li>
+<li>NWNX_PLAYER_RELOAD_RESOURCES_CURSORS
+: <a class="el" href="group__player.html#gaa18b3d40a86723c0ad852d0e0a0a281a">nwnx_player.nss</a>
+</li>
+<li>NWNX_PLAYER_RELOAD_RESOURCES_NUI_SKIN
+: <a class="el" href="group__player.html#gab8536e41ca31b84f6dd5828650487a39">nwnx_player.nss</a>
+</li>
+<li>NWNX_PLAYER_RELOAD_RESOURCES_TEXTURES
+: <a class="el" href="group__player.html#ga57297c3817997663b828e76cd0aa0ed5">nwnx_player.nss</a>
+</li>
 <li>NWNX_Player_ReloadColorPalettes()
 : <a class="el" href="group__player.html#gabe690b8bb044a40722f2e424dfc89b1d">nwnx_player.nss</a>
+</li>
+<li>NWNX_Player_ReloadResources()
+: <a class="el" href="group__player.html#ga6aec83cfa546924a8a286b924e934419">nwnx_player.nss</a>
 </li>
 <li>NWNX_Player_ReloadTlk()
 : <a class="el" href="group__player.html#gacf36156daa5d57d66da8b597cf6f8c7a">nwnx_player.nss</a>
@@ -6115,7 +6154,7 @@ $(document).ready(function(){initNavTree('globals_n.html',''); initResizable(); 
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Nov 8 2026 17:45:30 for NWNX:EE by <a href="http://www.doxygen.org/index.html">
+					Generated on Thu Nov 19 2026 18:09:06 for NWNX:EE by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.9.1.
 					<a href="../">Light version</a>
 				</li>

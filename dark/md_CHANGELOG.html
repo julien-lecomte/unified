@@ -117,6 +117,7 @@ Added</h2>
 <li>Events: Added events <code>NWNX_ON_DECREMENT_REMAINING_FEAT_USES_{BEFORE|AFTER}</code> which fire when the remaining uses of a feat are decremented</li>
 <li>Experimental: added <code>NWNX_EXPERIMENTAL_UFM_HOTFIX</code> to attempt to fix a server hang in CNetLayerWindow::UnpacketizeFullMessages.</li>
 <li>Events: Added events <code>NWNX_ON_INVENTORY_CLOSE_{BEFORE|AFTER}</code> which fire when a player closes an inventory through a client status message.</li>
+<li>Events: Added event <code>NWNX_ON_ENCUMBRANCE_CHANGE_AFTER</code> which fires when a creature's encumbrance state changes.</li>
 </ul>
 <h4><a class="anchor" id="autotoc_md12"></a>
 New Plugins</h4>
@@ -127,14 +128,18 @@ New Plugins</h4>
 New NWScript Functions</h4>
 <ul>
 <li>Player: GetOpenStore()</li>
+<li>Player: ReloadResources()</li>
 <li>Creature: GetNumberOfBonusSpells(), ModifyNumberBonusSpells()</li>
 <li>Store: GetBlackMarket(), SetBlackMarket()</li>
 <li>Util: SetStartingLocation()</li>
 <li>Object: GetLocalizedDescription(), SetLocalizedDescription()</li>
+<li>Object: GetLocalVariables()</li>
 <li>Util: RawPrint()</li>
 <li>Events: PeekEventData()</li>
 <li>Creature: {Get|Set}BaseACPolymorph()</li>
 <li>Events: RemoveObjectFromAllDispatchLists()</li>
+<li>Creature: GetMovementRateFactorModifier(), SetMovementRateFactorModifier()</li>
+<li>Administration: GetNWSyncAdvertHash(), GetNWSyncAdvertUrl(), SetNWSyncAdvert()</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md14"></a>
 Changed</h2>
@@ -145,6 +150,8 @@ Changed</h2>
 <li>Admin: Player/DM password functions no longer print the passwords to the log.</li>
 <li>SQL: Database passwords are no longer printed to the log when connecting.</li>
 <li>HTTPClient: Enable three custom fields to pass to response.</li>
+<li>Core: per-object storage lookups (<code>nwnxGet</code>) no longer copy the whole map, or create storage for objects that have none, on every call; this speeds up the Appearance and Player per-object update hooks.</li>
+<li>Race: the effect-apply hook no longer adds a child-race map entry for every new effect parameter or copies the child list, and does nothing when no child races are set.</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md15"></a>
 Deprecated</h2>
@@ -159,12 +166,17 @@ Removed</h2>
 <h2><a class="anchor" id="autotoc_md17"></a>
 Fixed</h2>
 <ul>
+<li>Player: Fixed <code><a class="el" href="group__player.html#ga93b73395786bcc1c62df9dbb7d0aaeff" title="Create a QBS for casting a spell.">NWNX_Player_QBS_UseSpecialAbility()</a></code> making a slot of type <code>NWNX_PLAYER_QBS_TYPE_SPELL</code> instead of <code>NWNX_PLAYER_QBS_TYPE_SPELLLIKEABILITY</code>.</li>
 <li>Fixed <code>NWNX_TWEAKS_SETAREA_CALLS_SETPOSITION</code> not working with <code>NWNX_ON_MATERIALCHANGE_*</code>.</li>
 <li>MaxLevel: Fixed returning an invalid number of known spells in some cases.</li>
 <li>Fixed <code>NWNX_TWEAKS_RESIST_ENERGY_STACKS_WITH_EPIC_ENERGY_RESISTANCE</code> not working correctly when the character has more than one resist energy feat.</li>
 <li>Fixed <code>NWNX_TWEAKS_SNEAK_ATTACK_IGNORE_CRIT_IMMUNITY</code> only considering 3 classes for determining the level difference of attacker and defender.</li>
 <li>Fixed <code>NWNX_NWSQLiteExtensions</code> by escaping the columns names during CREATE TABLE.</li>
+<li>Fixed every <code>json</code> value returned from or passed to an NWNX function leaking: NWNX declared <code>SharedPtrEngineStructure</code>'s virtuals in a different order from the 8193.37 server, so destroying one called <code>GetId()</code> instead of the destructor.</li>
 <li>SkillRanks: Fixed <code>GetAreaModifier()</code> dereferencing an empty <code>std::optional</code> (undefined behavior) when the queried area had no modifier set for the skill. Now returns <code>0</code> in that case.</li>
+<li>Race: Fixed a heap overflow when an effect with more than 8 integers (e.g. loaded from a character file) was copied from a parent race to its child races.</li>
+<li>Feat, Race: Fixed 128 needless <code>RemoveEffectById(0)</code> calls on every feat modifier removal, TURD load and racial modifier reapply. Applied effects with ID 0 are no longer removed by them.</li>
+<li>Feat: Fixed removing an effect with two or more linked bonus feats that have feat modifiers leaving some of the bonus feats and their modifiers applied. Modifier removal now waits until the engine has finished removing the effect.</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md18"></a>
 8193.37.13</h1>
@@ -1717,7 +1729,7 @@ Fixed</h2>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Nov 8 2026 17:45:30 for NWNX:EE by <a href="http://www.doxygen.org/index.html">
+					Generated on Thu Nov 19 2026 18:09:05 for NWNX:EE by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.9.1.
 					<a href="../">Light version</a>
 				</li>
